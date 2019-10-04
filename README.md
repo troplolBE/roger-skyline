@@ -127,6 +127,10 @@ projet 19, réseaux
   Puis le rendre executables
   
     sudo chmod +x /etc/network/if-pre-up.d/iptables
+    
+  Ensuite executez
+  
+    sudo /etc/network/if-pre-up.d/iptables
                   
 ## Denial Of Service Attack *DOS*
    Création du fichier log pour le serveur apache, fait office de jorunal de bord
