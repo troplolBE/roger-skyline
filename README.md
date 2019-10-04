@@ -2,9 +2,10 @@
 projet 19, réseaux
 
 ## Création VM
-   Dans le paramètres network ajouter un réseaux hôte privé
-    
-   Dans hostnetworkmanager créer un réseau mettre 255.255.255.252 en netmask
+
+   Dans file->hostnetworkmanager créer un réseau mettre 255.255.255.252 en netmask et desactiver le DHCP
+   
+   Dans le paramètres network de la VM, aller sur adapter 2 et mettre Host-Only Adapter
     
     — Taille de 8Go (7.41GB se rapproche le plus de 8Go)
     — Partitionner
@@ -13,12 +14,9 @@ projet 19, réseaux
          | ____ Une parition swap de 1Gb logique en swap
           | ____ Une partition avec le reste logique en '/home'
           
-## Installer des outils
-   Mise a jour des packages
+## Installer VIM
    
-    apt install -y vim sudo net-tools iptables-persistent fail2ban sendmail apache2
-    apt install -y git (partie déploiement)
-    
+    apt install -y vim
     
 ## Interface STATIC
    Mise en place du réseau, modifier le fichier
@@ -55,7 +53,15 @@ projet 19, réseaux
           
   Rendre la clé publique éffective
           
-    ssh-copy-id -i id_rsa.pub -p 2222 user@192.168.56.2
+    ssh-copy-id -i ~/.ssh/id_rsa.pub -p 2222 user@192.168.56.2
+  
+  Se connecter a la VM avec ssh user@192.168.56.2 -p 2222
+       
+## Installer des outils
+   Mise a jour des packages
+   
+    apt install -y sudo net-tools iptables-persistent fail2ban sendmail apache2
+    apt install -y git (partie déploiement)
        
 ## Firewall
    Mise des règles de pare-feu
