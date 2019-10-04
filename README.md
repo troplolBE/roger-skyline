@@ -62,6 +62,17 @@ projet 19, réseaux
    
     apt install -y sudo net-tools iptables-persistent fail2ban sendmail apache2
     apt install -y git (partie déploiement)
+    
+## Configuration de sudo
+   Configurer sudo pour repasser en user normal et respecter le pdf
+   
+    vim /etc/sudoers
+	
+   Rajouter sous la ligne avec root ALL=(ALL:ALL) ALL
+   
+    user ALL=(ALL:ALL) ALL
+	
+   Sauvergarder le fichier et retourner en user normal et utiliser sudo
        
 ## Firewall
    Mise des règles de pare-feu
