@@ -6,6 +6,8 @@ projet 19, réseaux
    Dans file->hostnetworkmanager créer un réseau mettre 255.255.255.252 en netmask et desactiver le DHCP
    
    Dans le paramètres network de la VM, aller sur adapter 2 et mettre Host-Only Adapter
+   
+   Pour le partitionnement il est important de mettre en bytes et pas en GB !!!
     
     — Taille de 8Go (7.41GB se rapproche le plus de 8Go)
     — Partitionner
